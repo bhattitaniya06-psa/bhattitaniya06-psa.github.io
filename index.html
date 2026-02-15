@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taniya Bhatti | Pharmacovigilance Scientist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .print-only { display: none; }
+        
+        /* Blur effect for sensitive info */
+        .blurred-info {
+            filter: blur(5px);
+            user-select: none;
+            pointer-events: none;
+            display: inline-block;
+            background: #e2e8f0;
+            border-radius: 4px;
+            padding: 0 4px;
+        }
+
+        @media print {
+            @page {
+                margin: 1.5cm;
+            }
+            .no-print { display: none !important; }
+            .print-only { display: block; }
+            body { background: white; color: black; line-height: 1.4; }
+            .container { max-width: 100%; width: 100%; padding: 0; margin: 0; }
+            section { page-break-inside: avoid; margin-bottom: 1.5rem; }
+            .shadow-lg, .shadow-sm, .shadow-md { box-shadow: none !important; }
+            .border { border: 1px solid #e2e8f0 !important; }
+            .bg-blue-600 { color: #2563eb !important; background: transparent !important; }
+            .text-blue-600 { color: #2563eb !important; }
+            .bg-slate-50 { background: white !important; }
+            .grid { display: block !important; }
+            .md\:col-span-1, .md\:col-span-2 { width: 100% !important; margin-bottom: 2rem; }
+            
+            /* Ensure blur persists in PDF or turns into a solid redaction */
+            .blurred-info {
+                filter: blur(5px);
+                background: #cccccc !important;
+                color: transparent !important;
+            }
+        }
+
+        .section-heading::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background: #3b82f6;
+            margin-top: 0.5rem;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-200 no-print">
+        <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+            <span class="text-xl font-bold text-blue-600 tracking-tight">TB.</span>
+            <div class="hidden md:flex space-x-6 font-medium text-sm">
+                <a href="#summary" class="hover:text-blue-600 transition">About</a>
+                <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
+                <a href="#experience" class="hover:text-blue-600 transition">Experience</a>
+                <a href="#education" class="hover:text-blue-600 transition">Education</a>
+                <a href="#volunteering" class="hover:text-blue-600 transition">Volunteering</a>
+            </div>
+            <button onclick="window.print()" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition flex items-center gap-2">
+                <i class="fas fa-file-pdf"></i> Download as PDF
+            </button>
+        </div>
+    </nav>
+
+    <main class="max-w-5xl mx-auto px-4 pt-28 pb-20">
+        
+        <!-- Header / Hero -->
+        <header class="text-center md:text-left mb-16 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+            <div>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-2 tracking-tight">Taniya Bhatti</h1>
+                <p class="text-xl md:text-2xl text-blue-600 font-semibold mb-6">Pharmacovigilance Scientist / Patient Safety Associate II</p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-4 text-slate-600 font-medium">
+                    <span class="flex items-center gap-2">
+                        <i class="fas fa-location-dot text-blue-500"></i> <span class="blurred-info">Location Redacted</span>
+                    </span>
+                    <span class="flex items-center gap-2">
+                        <i class="fas fa-phone text-blue-500"></i> <span class="blurred-info">+00 0000000000</span>
+                    </span>
+                    <a href="https://www.linkedin.com/in/dr-taniya-bhatti" target="_blank" class="flex items-center gap-2 hover:text-blue-600 transition">
+                        <i class="fab fa-linkedin text-blue-500"></i> LinkedIn Profile
+                    </a>
+                </div>
+            </div>
+            <div class="flex flex-col items-center gap-2 no-print">
+                <div class="w-32 h-32 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-4xl font-bold border-4 border-white shadow-xl">
+                    TB
+                </div>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            
+            <!-- Sidebar (Left) -->
+            <div class="md:col-span-1 space-y-12">
+                
+                <!-- Personal Info -->
+                <section>
+                    <h2 class="text-xl font-bold text-slate-900 mb-6 section-heading">Personal Details</h2>
+                    <div class="space-y-3 text-sm">
+                        <p><span class="font-bold text-slate-500 uppercase text-xs block">Nationality</span> Indian</p>
+                        <p><span class="font-bold text-slate-500 uppercase text-xs block">Date of Birth</span> <span class="blurred-info">00/00/0000</span></p>
+                        <p><span class="font-bold text-slate-500 uppercase text-xs block">Hobbies</span> Reading, Traveling, Art & Design</p>
+                    </div>
+                </section>
+
+                <section id="skills">
+                    <h2 class="text-xl font-bold text-slate-900 mb-6 section-heading">Core Competencies</h2>
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-sm font-bold uppercase tracking-wider text-slate-500 mb-3">Pharmacovigilance</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-white border border-slate-200 px-3 py-1 rounded-md text-sm font-semibold shadow-sm text-blue-700">ICSR Processing</span>
+                                <span class="bg-white border border-slate-200 px-3 py-1 rounded-md text-sm font-semibold shadow-sm text-blue-700">Aggregate Reporting</span>
+                                <span class="bg-white border border-slate-200 px-3 py-1 rounded-md text-sm font-semibold shadow-sm text-blue-700">DSUR/PSUR</span>
+                                <span class="bg-white border border-slate-200 px-3 py-1 rounded-md text-sm font-semibold shadow-sm text-blue-700">Signal Management</span>
+                                <span class="bg-white border border-slate-200 px-3 py-1 rounded-md text-sm font-semibold shadow-sm text-blue-700">Signal Detection</span>
+                                <span class="bg-white border border-slate-200 px-3 py-1 rounded-md text-sm font-semibold shadow-sm text-blue-700">Narrative Optimization</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-bold uppercase tracking-wider text-slate-500 mb-3">Systems & Software</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-white border border-slate-200 px-3 py-1 rounded-md text-sm font-semibold shadow-sm text-slate-700">Oracle Argus Safety</span>
+                                <span class="bg-white border border-slate-200 px-3 py-1 rounded-md text-sm font-semibold shadow-sm text-slate-700">EVWEB</span>
+                                <span class="bg-white border border-slate-200 px-3 py-1 rounded-md text-sm font-semibold shadow-sm text-slate-700">Aris G</span>
+                                <span class="bg-white border border-slate-200 px-3 py-1 rounded-md text-sm font-semibold shadow-sm text-slate-700">MedDRA Coding</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-bold uppercase tracking-wider text-slate-500 mb-3">Regulatory Standards</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-white border border-slate-200 px-3 py-1 rounded-md text-sm font-semibold shadow-sm text-green-700">ICH-GCP</span>
+                                <span class="bg-white border border-slate-200 px-3 py-1 rounded-md text-sm font-semibold shadow-sm text-green-700">GVP</span>
+                                <span class="bg-white border border-slate-200 px-3 py-1 rounded-md text-sm font-semibold shadow-sm text-green-700">FDA/EMA</span>
+                                <span class="bg-white border border-slate-200 px-3 py-1 rounded-md text-sm font-semibold shadow-sm text-green-700">CIOMS</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Languages -->
+                <section>
+                    <h2 class="text-xl font-bold text-slate-900 mb-6 section-heading">Languages</h2>
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center"><span class="font-medium">English</span><span class="text-slate-500 text-sm">Fluent (IELTS 7.0)</span></div>
+                        <div class="flex justify-between items-center"><span class="font-medium">Hindi</span><span class="text-slate-500 text-sm">Native</span></div>
+                    </div>
+                </section>
+
+                <!-- Certifications -->
+                <section id="certifications">
+                    <h2 class="text-xl font-bold text-slate-900 mb-6 section-heading">Certifications</h2>
+                    <ul class="space-y-4">
+                        <li class="bg-white p-3 rounded-lg border border-slate-200 shadow-sm">
+                            <p class="font-bold text-sm text-slate-900">Duolingo English Test</p>
+                            <p class="text-blue-600 text-xs font-bold uppercase">Score: 140</p>
+                        </li>
+                        <li class="bg-white p-3 rounded-lg border border-slate-200 shadow-sm">
+                            <p class="font-bold text-sm text-slate-900">Pearson PTE Academic</p>
+                            <p class="text-blue-600 text-xs font-bold uppercase">Score: 79</p>
+                        </li>
+                        <li class="bg-white p-3 rounded-lg border border-slate-200 shadow-sm">
+                            <p class="text-xs text-slate-500 font-medium">Certificate of Registration (Haryana)</p>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+
+            <!-- Content Area (Right) -->
+            <div class="md:col-span-2 space-y-12">
+                
+                <!-- Summary -->
+                <section id="summary">
+                    <h2 class="text-2xl font-bold text-slate-900 mb-6 section-heading">Professional Summary</h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        Strategic <strong class="text-slate-900">Pharmacovigilance Scientist</strong> with over 6 years of experience in global drug safety. Specialized in authoring regulatory-critical <strong class="text-slate-900">aggregate reports (DSURs, PSURs)</strong> and leading <strong class="text-slate-900">Signal Management</strong> initiatives. Proven track record of leveraging clinical diagnostic expertise to optimize benefit-risk assessments in <strong class="text-slate-900">Oncology and Cosmetology</strong> portfolios, consistently maintaining <strong class="text-slate-900">99%+ quality compliance</strong> with FDA, EMA, and GVP standards. Demonstrated leadership through mentoring Drug Safety Associates and ensuring data integrity across the safety lifecycle.
+                    </p>
+                </section>
+
+                <!-- Experience (Keywords Bolded for Impact) -->
+                <section id="experience">
+                    <h2 class="text-2xl font-bold text-slate-900 mb-8 section-heading">Work Experience</h2>
+                    <div class="space-y-10">
+                        <!-- Role 1 -->
+                        <div class="relative pl-8 border-l-2 border-slate-200">
+                            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-600 border-4 border-white"></div>
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+                                <div>
+                                    <h3 class="font-bold text-lg text-slate-900 underline decoration-blue-200 underline-offset-4">Patient Safety Associate II</h3>
+                                    <p class="text-blue-600 font-bold">PAREXEL International India Private Limited</p>
+                                </div>
+                                <span class="text-sm font-bold text-slate-500 py-1 px-2 bg-slate-100 rounded">Oct 2025 – Present</span>
+                            </div>
+                            <ul class="list-disc text-slate-600 space-y-2 text-sm">
+                                <li>Expertise in <strong class="text-slate-900">Triage, Data Entry (DE), and Quality Control (QC)</strong> processes, ensuring compliant <strong class="text-slate-900">adverse event reporting</strong> per ICH-GCP.</li>
+                                <li>Experienced in <strong class="text-slate-900">Aggregate Reporting (DSURs, PSURs)</strong> and <strong class="text-slate-900">Signal Management</strong> activities including Signal Detection and trend analysis.</li>
+                                <li>Maintaining <strong class="text-slate-900">99%+ quality compliance</strong> with <strong class="text-slate-900">FDA, EMA, and GVP</strong> standards for specialized therapeutic areas.</li>
+                                <li>Proficient in <strong class="text-slate-900">EVWEB (Oracle Argus Safety)</strong> for case intake, processing, and generation of expedited/periodic safety reports.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Role 2 -->
+                        <div class="relative pl-8 border-l-2 border-slate-200">
+                            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-300 border-4 border-white"></div>
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+                                <div>
+                                    <h3 class="font-bold text-lg text-slate-900">Drug Safety Associate II</h3>
+                                    <p class="text-blue-600 font-bold">PAREXEL International India Private Limited</p>
+                                </div>
+                                <span class="text-sm font-bold text-slate-500 py-1 px-2 bg-slate-100 rounded">Apr 2022 – Oct 2025</span>
+                            </div>
+                            <ul class="list-disc text-slate-600 space-y-2 text-sm">
+                                <li>Processed complex <strong class="text-slate-900">ICSRs</strong> using <strong class="text-slate-900">Argus Safety</strong> database from Clinical Trial, Literature, and Spontaneous sources.</li>
+                                <li>Managed <strong class="text-slate-900">MLM (Medical Literature Monitoring)</strong> and EMA literature cases, extracting safety data from scientific publications.</li>
+                                <li>Delivered <strong class="text-slate-900">Instructor-Led Training (ILT)</strong> on safety workflows, quality expectations, and regulatory timelines.</li>
+                                <li>Applied <strong class="text-slate-900">pharmacokinetics and toxicology</strong> principles to optimize benefit-risk profiles of medicinal products.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Role 3 -->
+                        <div class="relative pl-8 border-l-2 border-slate-200">
+                            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-300 border-4 border-white"></div>
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+                                <div>
+                                    <h3 class="font-bold text-lg text-slate-900">Drug Safety Associate I</h3>
+                                    <p class="text-blue-600 font-bold">PAREXEL International India Private Limited</p>
+                                </div>
+                                <span class="text-sm font-bold text-slate-500 py-1 px-2 bg-slate-100 rounded">Dec 2019 – Mar 2022</span>
+                            </div>
+                            <ul class="list-disc text-slate-600 space-y-2 text-sm">
+                                <li>Conducted <strong class="text-slate-900">Triage of ICSRs</strong> to determine reporting timelines and regulatory obligations.</li>
+                                <li>Assessed <strong class="text-slate-900">causality and expectedness</strong> using <strong class="text-slate-900">RSI (SmPCs, CCDS, CCSI, IBs)</strong>.</li>
+                                <li>Applied <strong class="text-slate-900">MedDRA coding</strong> per global conventions and conducted rigorous QC against source documentation.</li>
+                                <li>Prepared foundational sections for regulatory documents including <strong class="text-slate-900">PSURs, DSURs, and RMPs</strong>.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Role 4 (Clinical Background) -->
+                        <div class="relative pl-8 border-l-2 border-slate-200">
+                            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-300 border-4 border-white"></div>
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+                                <div>
+                                    <h3 class="font-bold text-lg text-slate-900">General Dentist</h3>
+                                    <p class="text-blue-600 font-bold">Arora Dental Clinic</p>
+                                </div>
+                                <span class="text-sm font-bold text-slate-500 py-1 px-2 bg-slate-100 rounded">Jun 2018 – Nov 2019</span>
+                            </div>
+                            <p class="text-sm text-slate-600">Applied diagnostic expertise to patient care, including <strong class="text-slate-900">restorative dental treatment</strong>, prosthodontics, and pain management.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Education -->
+                <section id="education">
+                    <h2 class="text-2xl font-bold text-slate-900 mb-8 section-heading">Education</h2>
+                    <div class="space-y-6">
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex justify-between items-center">
+                            <div>
+                                <h3 class="font-bold text-slate-900">AI in Healthcare Specialization</h3>
+                                <p class="text-blue-600 text-sm font-medium">Stanford University</p>
+                            </div>
+                            <span class="text-xs font-bold text-slate-400">2026</span>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex justify-between items-center">
+                            <div>
+                                <h3 class="font-bold text-slate-900">Bachelor of Dental Surgery (BDS)</h3>
+                                <p class="text-blue-600 text-sm font-medium">Pandit B.D. Sharma University of Health Science</p>
+                            </div>
+                            <span class="text-xs font-bold text-slate-400">2017</span>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex justify-between items-center">
+                            <div>
+                                <h3 class="font-bold text-slate-900 text-sm">Senior Secondary & Matriculation</h3>
+                                <p class="text-blue-600 text-xs font-medium">D.A.V. Senior Secondary Public School</p>
+                            </div>
+                            <span class="text-xs font-bold text-slate-400">2010 – 2012</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Volunteering -->
+                <section id="volunteering">
+                    <h2 class="text-2xl font-bold text-slate-900 mb-6 section-heading">Volunteering & Community</h2>
+                    <div class="space-y-4 text-sm text-slate-600">
+                        <div class="bg-blue-50/50 p-4 rounded-lg border-l-4 border-blue-400">
+                            <h4 class="font-bold text-slate-900">Dental Intern & Community Healthcare</h4>
+                            <p class="mt-1">Managed routine medical tasks, health screenings, and oral health education in community camps, serving diverse patient populations.</p>
+                        </div>
+                        <div class="bg-blue-50/50 p-4 rounded-lg border-l-4 border-blue-400">
+                            <h4 class="font-bold text-slate-900">CDE Program Leadership</h4>
+                            <p class="mt-1">Organized programs on World Radiography Day and participated in specialized clinical correlation delegates.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Awards -->
+                <section id="awards">
+                    <h2 class="text-2xl font-bold text-slate-900 mb-6 section-heading">Honors & Awards</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex items-start gap-3 p-4 bg-white border border-slate-200 rounded-lg">
+                            <i class="fas fa-award text-blue-500 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-sm">Letter of Appreciation</h4>
+                                <p class="text-xs text-slate-500">Professional Excellence, 2023</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 p-4 bg-white border border-slate-200 rounded-lg">
+                            <i class="fas fa-medal text-blue-500 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-sm">Art & Merit Recognition</h4>
+                                <p class="text-xs text-slate-500">1st Position - College Festivals</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-slate-900 text-white py-12 no-print">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <p class="text-slate-400 text-sm">&copy; 2026 Taniya Bhatti | Pharmacovigilance & Patient Safety Expert</p>
+        </div>
+    </footer>
+
+</body>
+</html>
